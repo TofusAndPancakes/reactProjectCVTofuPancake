@@ -1,0 +1,957 @@
+/* Reseting Everything */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+    font-size: unset;
+    font-weight: unset;
+    line-height: unset;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-color: #4e4e4e;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.appWrapper {
+  /*Extra Modifications!*/
+  min-width: 370px;
+}
+
+/* Navbar */
+.appWindow {
+    width: 100%;
+    height: 36px;
+    position: relative;
+    float: left;
+
+    background-color: #383838;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.appWindow .icon {
+    width: 24px;
+    height: auto;
+    position: relative;
+    float: left;
+
+    margin-right: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appWindow .icon img {
+    width: 24px;
+    height: auto;
+
+    cursor: pointer;
+}
+
+.appWindow .title {
+     width: auto;
+     height: auto;
+     position: absolute;
+
+     top: 50%;
+     left: 50%;
+     transform: translateX(-50%) translateY(-50%);
+
+     text-align: center;
+}
+
+.appWindow .title p {
+    font-size: 14px;
+    line-height: 1.2;
+    color: #eaeaea;
+}
+
+/* Menu */
+.appMenu {
+    width: 100%;
+    height: 36px;
+    position: relative;
+    float: left;
+
+    background-color: #4e4e4e;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.appMenu .function {
+    width: auto;
+    height: 18px;
+    position: relative;
+    float: left;
+
+    margin-left: 5px;
+
+    padding: 4px 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid rgba(103, 113, 135, 0);
+    border-radius: 5px;
+
+    background: #4e4e4e;
+
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.appMenu p {
+    font-size: 12px;
+    line-height: 1.2;
+    color: #eaeaea;
+}
+
+.appMenu .function:hover {
+    border: 1px solid rgba(103, 113, 135, 0.5);
+    background: #677187;
+}
+
+.appMenu .function
+
+/* Start */
+.appStart {
+    width: 100%;
+    height: 1000px;
+    position: relative;
+    float: left;
+
+    background-color: #383838;
+}
+
+/* Body */
+.appBody{
+    width: 100%;
+    height: auto;
+    position: relative;
+    float: left;
+
+    display: flex;
+}
+
+/* Inspired from https://stackoverflow.com/questions/1032914/how-to-make-a-div-fill-a-remaining-horizontal-space */
+
+/* Sidebar */
+.appSideBar {
+    width: 48px;
+    height: 799px;
+    position: relative;
+    float: left;
+
+    z-index: 8;
+
+    background-color: #4E4E4E;
+    border-right: 1px solid #313131;
+    border-bottom: 1px solid #313131;
+
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.appSideBarMinimize {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    float: left;
+
+    background-color: #383838;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.appSideBar img {
+    width: 24px;
+    height: auto;
+}
+
+.appSideBarSetting {
+    width: 100%;
+    height: 24px;
+    position: relative;
+    float: left;
+
+    background-color: #383838;
+    border-top: 1px solid #313131;
+    border-bottom: inset 4px #4e4e4e;
+}
+
+.appSideBarSettingInfo {
+    width: 24px;
+    height: auto;
+    position: relative;
+    float: left;
+
+    background-color: #383838;
+}
+
+.appSideBarSettingNav {
+    width: 24px;
+    height: auto;
+    position: relative;
+    float: left;
+
+    margin-top: 2px;
+
+    background-color: #4e4e4e;
+}
+
+.appSideBarSetting img {
+    width: 22px;
+    height: auto;
+}
+
+.appSideBarTool {
+    width: 100%;
+    height: auto;
+    position: relative;
+    float: left;
+
+    padding-bottom: 3px;
+
+    background-color: #3f3f3f;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.appSideBar .icon {
+    width: 24px;
+    height: auto;
+    position: relative;
+    float: left;
+
+    margin-top: 3px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid rgba(103, 113, 135, 0);
+    border-radius: 5px;
+
+    background: #3f3f3f;
+
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.appSideBar. .icon img {
+    width: 24px;
+    height: auto;
+}
+
+.appSideBar .icon:hover {
+    border: 1px solid rgba(103, 113, 135, 0.5);
+    background: #677187;
+}
+
+.appSideBar hr {
+    width: 70%;
+    height: 1px;
+
+    margin-top: 3px;
+
+    background-color: rgba(103, 113, 135);
+    border:none;
+    border-radius: 5px;
+}
+
+.appSideBarColor {
+    width: 100%;
+    height: auto;
+}
+
+/* Start of Image Main */
+.appImageMain {
+    width: 100%;
+    height: auto;
+    position: relative;
+    float: left;
+
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* App Image Setting */
+.appImageSetting {
+    width: 100%;
+    height: 60px;
+    position: relative;
+    float: left;
+
+    background-color: #383838;
+
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.appImageSettingTools {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    float: left;
+
+    background-color: #4e4e4e;
+
+    border-top: 1px solid #313131;
+    border-bottom: 1px solid #313131;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.appImageSettingTabs {
+    width: 100%;
+    height: 26px;
+    position: relative;
+    float: left;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.appImagePadding {
+    width: 48px;
+    height: auto;
+}
+
+.appImageSettingTab {
+    width: auto;
+    height: 22px;
+    position: relative;
+    float: left;
+
+    border: 1px solid #313131;
+    background-color: #4e4e4e;
+
+    padding: 1px 5px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.appImageSettingTabActive{
+    width: auto;
+    height: 22px;
+    position: relative;
+    float: left;
+
+    border: 1px solid #313131;
+    background-color: #677187;
+
+    padding: 1px 5px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.appImageSetting p {
+    font-size: 12px;
+    line-height: 1.2;
+    color: #eaeaea;
+
+    margin-left: 5px;
+}
+
+.appImageSetting img {
+    width: 22px;
+    height: auto;
+
+    margin-left: 2px;
+}
+
+/* App Image */
+.appImage {
+    width: 100%;
+    height: 740px;
+    position: relative;
+    float: left;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: #4e4e4e;
+}
+
+.appImageMenu {
+    width: 100%;
+    height: 36px;
+    position: relative;
+    float: left;
+
+    background-color: #4e4e4e;
+}
+
+.appImageTab {
+    width: 100%;
+    height: 36px;
+    position: relative;
+    float: left;
+
+    background-color: #383838;
+}
+
+.appImageContent {
+    width: 95%;
+    height: auto;
+    position: relative;
+    float: left;
+
+    overflow: hidden;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+    background-color: #eaeaea;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appImageContent img {
+    width: 600px;
+    height: auto;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.appSideBarColor {
+    width: 100%;
+    height: auto;
+    position: relative;
+    float: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.appSideBarColorOutline {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    float: left;
+}
+
+.appSideBarColorOutline .primary img {
+    width: 40px;
+    height: auto;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    z-index: 2;
+
+    text-align: center;
+
+    border-radius: 5px;
+}
+
+.appSideBarColorOutline .secondary img {
+    width: 40px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+
+    text-align: center;
+
+    border-radius: 5px;
+}
+
+.appSideBarColorTransparent {
+    width: 60%;
+    height: 10px;
+    position: relative;
+    float: left;
+
+    background-color: #eaeaea;
+    border: 2px solid #a1a1a1;
+    border-radius: 5px;
+}
+
+/* App Chat */
+.appChat {
+    width: 301px;
+    height: 514px;
+    position: absolute;
+    overflow: hidden;
+
+    /* To put above everything! */
+    z-index: 10;
+
+    /* Setting Position! */
+    top: 70px;
+    right: 10px;
+
+    border-radius: 5px;
+    border: #383838 solid;
+}
+
+.appChatHeader {
+    width: 100%;
+    height: 78px;
+    position: relative;
+    float: left;
+
+    z-index: 2;
+
+    color: #eaeaea;
+    background-color: #4e4e4e;
+
+    /* Box Shadow */
+    box-shadow: 0 2px 10px 5px rgb(93 78 96 / 30%);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.appChatHeaderLeft {
+    width: 60%;
+    height: auto;
+    position: relative;
+    float: left;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.appChatHeaderLeftImage {
+    width: 80px;
+    height: auto;
+    position: relative;
+    float: left;
+
+    clip-path: circle(40% at 50% 50%);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.appChatHeaderLeftImage img {
+    width: 50px;
+    height: auto;
+}
+
+.appChatHeaderLeftUser {
+    min-width: 120px;
+    height: auto;
+    position: relative;
+    float: left;
+
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.appChatHeaderLeft h3 {
+    font-size: 16px;
+}
+
+.appChatHeaderLeft p {
+    font-size: 10px;
+}
+
+.appChatHeaderRight {
+    width: 20%;
+    height: auto;
+    position: relative;
+    float: left;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.appChatHeaderRight img {
+    width: 40px;
+    height: auto;
+}
+
+.appChatContainer {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    float: left;
+    overflow-y: scroll;
+
+    padding-bottom: 20px;
+
+    box-shadow: inset 0 -25px 20px rgba(93, 78, 96, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: #ffffff;
+    background-color: #eaeaea;
+}
+
+.appChatTextContainer {
+    width: 90%;
+    height: auto;
+    position: relative;
+    float: left;
+
+    border-radius: 5px;
+
+    background-color: #3f3f3f;
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appChatTextContainer p {
+    font-size: 14px;
+}
+
+.appChatTextContainer img {
+    width: 20px;
+    height: auto;
+    position: absolute;
+
+    top: 0px;
+    left: -15px;
+}
+
+.appChatTextContainerPadding {
+    width: 90%;
+    height: auto;
+    position: relative;
+    float: left;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.appChatInput {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    float: left;
+
+    background-color: #3f3f3f;
+}
+
+.appChatInputTextBox {
+    width: 75%;
+    height: auto;
+    position: relative;
+    float: left;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.appChatInputTextBox textarea {
+    width: 95%;
+    height: 60px;
+
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.appChatInputSubmit {
+    width: 25%;
+    height: auto;
+    position: relative;
+    float: left;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.appChatInputSubmit img {
+    width: 60px;
+    height: auto;
+
+    margin-top: 10px;
+
+    cursor: pointer;
+}
+
+.appChatMinimize {
+    width: 30px;
+    height: 300px;
+    position: absolute;
+
+    top: 70px;
+    right: 0px;
+
+    /* Under App Chat */
+    z-index: 8;
+
+    border-radius: 5px 0 0 5px;
+    border: #383838 solid;
+
+    visibility: hidden;
+}
+
+.appChatMinimize .icon {
+    width: 100%;
+    height: 36px;
+    position: relative;
+    float: left;
+
+    background-color: #383838;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appChatMinimize .icon img {
+    width: 24px;
+    height: auto;
+
+    cursor: pointer;
+}
+
+.appChatMinimize .text {
+    width: 100%;
+    height: 264px;
+    position: relative;
+    float: left;
+
+    background-color: #4e4e4e;
+}
+
+.appChatMinimize .text p {
+    min-width: 180px;
+    max-height: 20px;
+
+    text-align: center;
+
+    position: absolute;
+    top: 50%;
+    left: -76px;
+
+    color: #eaeaea;
+
+    transform: translateY(-80%) rotate(-90deg);
+    transform-origin: center;
+}
+
+/* Replaces AppImage in main page */
+.appFile {
+    width: 100%;
+    height: 740px;
+    position: relative;
+    float: left;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #4e4e4e;
+}
+
+.appFile .text {
+    text-align: center;
+    color: #eaeaea;
+}
+
+/* Notice */
+.appNotice {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+
+    z-index: 14;
+
+    background-color: rgba(56 56 56 / 0.7);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appNoticeModal {
+    width: 400px;
+    height: auto;
+    position: relative;
+    float: left;
+
+    background-color: #4e4e4e;
+    color: #eaeaea;
+
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 450px) {
+    .appNoticeModal {
+        width: 300px
+    }
+}
+
+.appNoticeModalWindow {
+    width: 100%;
+    height: 36px;
+    position: relative;
+    float: left;
+
+    border-radius: 5px 5px 0 0;
+
+    background-color: #383838;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.appNoticeModalWindow .icon {
+    width: 24px;
+    height: auto;
+    position: relative;
+    float: left;
+
+    margin-right: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.appNoticeModalWindow .icon img {
+    width: 24px;
+    height: auto;
+
+    cursor: pointer;
+}
+
+.appNoticeModalContent {
+    width: 80%;
+    height: auto;
+    position: relative;
+    float: left;
+
+    margin: 20px 0 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.appNoticeModalContent h2 {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.appNoticeModalContent p {
+    font-size: 16px;
+}
+
+.appNoticeModalContent hr {
+    width: 100%;
+    height: 1px;
+
+    margin: 5px 0;
+
+    background-color: rgba(103, 113, 135);
+    border:none;
+    border-radius: 5px;
+}
+
+.appNoticeModal button {
+    width: 100px;
+    height: 30px;
+    position: relative;
+    float: left;
+
+    color: #eaeaea;
+
+    text-align: center;
+
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+
+    background-color: #5a5a5a;
+    cursor: pointer;
+
+    transition: all 0.3s;
+}
+
+.appNoticeModal button:hover {
+    border: 1px solid #eaeaea;
+    background: #677187;
+}
